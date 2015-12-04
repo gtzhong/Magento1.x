@@ -59,4 +59,26 @@ foreach($order->getAllItems() as $currentItem){
         $result = orderProductCustomOption::getOrderItemCustomOption($productAllOptions, $options);
     }
 }
+
+############## change 2
+/**
+* 获取多个不同的ration选项内容
+* 
+* @param mixed $productOptions
+* @return []
+*/
+function getRadioOptionDetail($productOptions){
+        $result = null;
+        foreach($productOptions as $_option){
+            $optionvValues = $_option->getValues();
+            if($optionvValues && $_option->getType() == 'radio'){
+                $option_id = $_option->getoption_id();
+                $result[$option_id] = $_option->getData();
+                foreach($optionvValues as $optionDetail){
+                    $result[$option_id]['detail'][] = $optionDetail->getData();
+                }
+            }
+        }
+        return $result;
+    }
 ?>

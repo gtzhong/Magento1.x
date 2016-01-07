@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <Ame_TypeChange>
+      <version>1.0.0</version>
+    </Ame_TypeChange>
+  </modules>
+  <global>
+    <models>
+      <ame_typechange><class>Ame_TypeChange_Model</class></ame_typechange>
+    </models>
+    <helpers>
+      <ame_typechange><class>Ame_TypeChange_Helper</class></ame_typechange>
+    </helpers>
+  </global>
+  <adminhtml>
+    <events>
+      <!--事件名称-->
+      <adminhtml_block_html_before>
+        <observers>
+          <ame_typechange>
+            <type>singleton</type>
+            <class>ame_typechange/observer</class>
+            <method>addMassactionToProductGrid</method>
+          </ame_typechange>
+        </observers>
+      </adminhtml_block_html_before>
+    </events>
+    <translate>
+      <modules>
+        <Ame_TypeChange>
+          <files>
+            <default>Ame_TypeChange.csv</default>
+          </files>
+        </Ame_TypeChange>
+      </modules>
+    </translate>
+  </adminhtml>
+  <admin>
+    <routers>
+      <adminhtml>
+        <args>
+          <modules>
+            <Ame_TypeChange before="Mage_Adminhtml">Ame_TypeChange_Adminhtml</Ame_TypeChange>
+          </modules>
+        </args>
+      </adminhtml>
+    </routers>
+  </admin>
+</config>

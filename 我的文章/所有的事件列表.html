@@ -1,0 +1,1741 @@
+﻿<div class=" aui-page-panel" id="main" style="margin-left: 285px;">
+  <div id="main-header">
+    <div class="content-navigation view" id="navigation">
+      <ul class="ajs-menu-bar">
+        <li class="normal ajs-menu-item"> <a data-container="#navigation" aria-owns="action-menu" aria-haspopup="true" href="#" class="action ajs-menu-title aui-dropdown2-trigger" id="action-menu-link"><span><span>Tools</span></span></a>
+          <div class="aui-dropdown2 aui-style-default most-right-menu-item" id="action-menu">
+            <ul class="section-primary first aui-dropdown2-section" id="action-menu-primary">
+              <li> <a title="View Attachments (t)" accesskey="t" class="action-view-attachments" rel="nofollow" href="/pages/viewpageattachments.action?pageId=10223906" id="view-attachments-link"> <span>A<u>t</u>tachments (0)</span> </a> </li>
+              <li> <a title="" class="action-view-history" rel="nofollow" href="/pages/viewpreviousversions.action?pageId=10223906" id="action-view-history-link"> <span>Page History</span> </a> </li>
+              <li> <a title="Edit restrictions" class="action-page-permissions" rel="nofollow" href="/pages/viewinfo.action?pageId=10223906" id="action-page-permissions-link"> <span>Restrictions</span> </a> </li>
+            </ul>
+            <ul class="section-secondary aui-dropdown2-section" id="action-menu-secondary">
+              <li> <a title="" class="action-view-info" rel="nofollow" href="/pages/viewinfo.action?pageId=10223906" id="view-page-info-link"> <span>Page Information</span> </a> </li>
+              <li> <a title="Link to this Page (k)" class="" rel="nofollow" href="/pages/viewinfo.action?pageId=10223906" id="link-to-page-link"> <span>Link to this Page…</span> </a> </li>
+              <li> <a title="" class="" rel="nofollow" href="/pages/reorderpages.action?key=m1wiki&amp;openId=10223906#selectedPageInHierarchy" id="view-in-hierarchy-link"> <span>View in Hierarchy</span> </a> </li>
+              <li> <a title="" class="action-view-source popup-link" rel="nofollow" href="/plugins/viewsource/viewpagesrc.action?pageId=10223906" id="action-view-source-link"> <span>View Source</span> </a> </li>
+              <li> <a title="" class="" rel="nofollow" href="/spaces/flyingpdf/pdfpageexport.action?pageId=10223906" id="action-export-pdf-link"> <span>Export to PDF</span> </a> </li>
+              <li> <a title="" class="action-export-word" rel="nofollow" href="/exportword?pageId=10223906" id="action-export-word-link"> <span>Export to Word</span> </a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="pagetitle with-breadcrumbs" id="title-heading">
+      <div id="breadcrumb-section">
+        <ol id="breadcrumbs">
+          <li class="first"> <span class=""><a href="/collector/pages.action?key=m1wiki">Pages</a></span> </li>
+          <li> <span class=""><a href="/display/m1wiki/Magento+1.x+Wiki">Magento 1.x Wiki</a></span> </li>
+          <li> <span class=""><a href="/display/m1wiki/Magento+Architecture">Magento Architecture</a></span> </li>
+        </ol>
+      </div>
+      <a class="assistive" href="#page-banner-end">Skip to end of banner</a>
+      <div class="assistive" id="page-banner-start"></div>
+      <div id="page-metadata-banner" style="visibility: visible;">
+        <ul class="banner">
+          <li class="noprint hidden" id="system-content-items"><a class="hidden" id="content-metadata-page-restrictions" title="Restrictions apply" href=""><img style="height: 16px; width: 16px;" src="/s/en_GB/5528/d86f1e458384da85f007b276ccfa37b0b9acccac.10/_/download/resources/com.atlassian.confluence.plugins.confluence-page-banner:page-banner-resources/images/red_padlock.png" class="page-banner-item-icon"></a></li>
+          <li id="content-metadata-jira-wrapper" class="page-metadata-item noprint has-button"><a class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden" id="content-metadata-jira" title="" href=""><img style="height: 16px; width: 16px;" src="/s/en_GB/5528/d86f1e458384da85f007b276ccfa37b0b9acccac.10/_/download/resources/com.atlassian.confluence.plugins.confluence-jira-metadata:confluence-jira-metadata-resources/img/icon-jira-link.png" class="page-banner-item-icon"><span>JIRA links</span></a></li>
+        </ul>
+      </div>
+      <a class="assistive" href="#page-banner-start">Go to start of banner</a>
+      <div class="assistive" id="page-banner-end"></div>
+      <h1 class="with-breadcrumbs" id="title-text"> <a href="/display/m1wiki/Magento+1.x+Events+Reference">Magento 1.x Events Reference</a> </h1>
+    </div>
+  </div>
+  <!-- \#main-header -->
+  <div id="sidebar-container"> </div>
+  <!-- \#sidebar-container -->
+  <div class="page view" id="content">
+    <div id="action-messages"> </div>
+    <script title="searchResultsGrid" type="text/x-template">
+    &lt;table class="aui"&gt;
+        &lt;thead&gt;
+            &lt;tr class="header"&gt;
+                &lt;th class="search-result-title"&gt;Page Title&lt;/th&gt;
+                &lt;th class="search-result-space"&gt;Space&lt;/th&gt;
+                &lt;th class="search-result-date"&gt;Updated&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+    &lt;/table&gt;
+</script>
+    <script title="searchResultsGridCount" type="text/x-template">
+    &lt;p class="search-result-count"&gt;{0}&lt;/p&gt;
+</script>
+    <script title="searchResultsGridRow" type="text/x-template">
+    &lt;tr class="search-result"&gt;
+        &lt;td class="search-result-title"&gt;&lt;a href="{1}" class="content-type-{2}"&gt;&lt;span&gt;{0}&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+        &lt;td class="search-result-space"&gt;&lt;a class="space" href="/display/{4}/" title="{3}"&gt;{3}&lt;/a&gt;&lt;/td&gt;
+        &lt;td class="search-result-date"&gt;&lt;span class="date" title="{6}"&gt;{5}&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+</script>
+    <a class="assistive" href="#page-metadata-end">Skip to end of metadata</a>
+    <div class="assistive" id="page-metadata-start"></div>
+    <div class="page-metadata">
+      <ul>
+        <li class="page-metadata-modification-info"> Created by <span class="author"> <a class="url fn" href="    /display/~stevjohnson
+">Steven Johnson</a></span>, last modified on <a href="/pages/diffpagesbyversion.action?pageId=10223906&amp;selectedPageVersions=1&amp;selectedPageVersions=2" class="last-modified" original-title="Sep 07, 2015 12:14">Sep 07, 2015</a> </li>
+      </ul>
+    </div>
+    <a class="assistive" href="#page-metadata-start">Go to start of metadata</a>
+    <div class="assistive" id="page-metadata-end"></div>
+    <div class="wiki-content" id="main-content">
+      <p>The following is a list of many Magento Community Edition events with module and parameters.&nbsp;<strong>Note that some events are dispatched with dynamically-calculated names, so this list is and always will be “incomplete”.</strong>&nbsp;At the bottom there is example of using an event.</p>
+      <div class="table-wrap">
+        <table class="confluenceTable">
+          <tbody>
+            <tr>
+              <td class="confluenceTd" colspan="2"><strong>Magento</strong></td>
+              <td class="confluenceTd" colspan="2"><strong>Module</strong></td>
+              <td class="confluenceTd" colspan="2"><strong>Event Name</strong></td>
+              <td class="confluenceTd" colspan="2"><strong>Parameters</strong></td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Admin</td>
+              <td class="confluenceTd" colspan="2">admin_session_user_login_success</td>
+              <td class="confluenceTd" colspan="2">array(’user’⇒$user)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Admin</td>
+              <td class="confluenceTd" colspan="2">admin_session_user_login_failed</td>
+              <td class="confluenceTd" colspan="2">array(’user_name’⇒$username, ‘exception’ ⇒ $e)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Admin</td>
+              <td class="confluenceTd" colspan="2">admin_user_authenticate_after</td>
+              <td class="confluenceTd" colspan="2">array(’username’ ⇒ $username,’password’ ⇒ $password,’user’ ⇒ $this,’result’ ⇒ $result)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_block_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_category_tabs</td>
+              <td class="confluenceTd" colspan="2">array(’tabs’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_category_tree_is_moveable</td>
+              <td class="confluenceTd" colspan="2">array(’options’⇒$options)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_category_tree_can_add_root_category</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $this→getCategory(),’options’ ⇒ $options,’store’ ⇒ $this→getStore()→getId())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_category_tree_can_add_sub_category</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $this→getCategory(),’options’ ⇒ $options,’store’ ⇒ $this→getStore()→getId())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_product_attribute_types</td>
+              <td class="confluenceTd" colspan="2">array(’response’⇒$response)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_edit_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’⇒$form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_edit_element_types</td>
+              <td class="confluenceTd" colspan="2">array(’response’⇒$response)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_attribute_set_main_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_attribute_set_toolbar_main_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_form_prepare_excluded_field_list</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_edit_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’⇒$form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_edit_element_types</td>
+              <td class="confluenceTd" colspan="2">array(’response’⇒$response)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_catalog_product_edit_tab_attributes_create_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cms_page_edit_tab_content_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’ ⇒ $form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cms_page_edit_tab_design_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’ ⇒ $form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cms_page_edit_tab_main_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’ ⇒ $form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cms_page_edit_tab_meta_prepare_form</td>
+              <td class="confluenceTd" colspan="2">array(’form’ ⇒ $form)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_widget_grid_filter_collection</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this→getCollection(), ‘filter_values’ ⇒ $this→_filterValues)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_widget_container_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_controller_action_predispatch_start</td>
+              <td class="confluenceTd" colspan="2">array()</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_customer_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’customer’ ⇒ $customer, ‘request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_customer_save_after</td>
+              <td class="confluenceTd" colspan="2">array(’customer’ ⇒ $customer)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">on_view_report</td>
+              <td class="confluenceTd" colspan="2">array(’report’ ⇒ ‘search’)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_category_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $category,’request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_category_delete</td>
+              <td class="confluenceTd" colspan="2">array(’category’⇒$category)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_product_new_action</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_product_edit_action</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_product_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product, ‘request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_product_delete</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">catalog_product_to_website_change</td>
+              <td class="confluenceTd" colspan="2">array(</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">cms_page_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’page’ ⇒ $model, ‘request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cmspage_on_delete</td>
+              <td class="confluenceTd" colspan="2">array(’title’ ⇒ $title, ‘status’ ⇒ ‘success’)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_cmspage_on_delete</td>
+              <td class="confluenceTd" colspan="2">array(’title’ ⇒ $title, ‘status’ ⇒ ‘fail’)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">admin_permissions_role_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’object’ ⇒ $role, ‘request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_controller_catalogrule_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_controller_salesrule_prepare_save</td>
+              <td class="confluenceTd" colspan="2">array(’request’ ⇒ $this→getRequest())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_sales_order_create_process_data</td>
+              <td class="confluenceTd" colspan="2">$eventData</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">adminhtml_sales_order_creditmemo_register_before</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">admin_system_config_changed_section_{$section}</td>
+              <td class="confluenceTd" colspan="2">array(’website’ ⇒ $website, ‘store’ ⇒ $store)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">store_group_save</td>
+              <td class="confluenceTd" colspan="2">array(’group’ ⇒ $groupModel)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">store_edit</td>
+              <td class="confluenceTd" colspan="2">array(’store’⇒$storeModel)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">store_add</td>
+              <td class="confluenceTd" colspan="2">array(’store’⇒$storeModel)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">store_delete</td>
+              <td class="confluenceTd" colspan="2">array(’store’ ⇒ $model)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">sales_convert_order_to_quote</td>
+              <td class="confluenceTd" colspan="2">array(’order’ ⇒ $order,’quote’ ⇒ $this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Adminhtml</td>
+              <td class="confluenceTd" colspan="2">sales_convert_order_item_to_quote_item</td>
+              <td class="confluenceTd" colspan="2">array(’order_item’ ⇒ $orderItem,’quote_item’ ⇒ $item)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Api</td>
+              <td class="confluenceTd" colspan="2">api_user_authenticated</td>
+              <td class="confluenceTd" colspan="2">array(’model’ ⇒ $this,’api_key’ ⇒ $apiKey)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Bundle</td>
+              <td class="confluenceTd" colspan="2">bundle_product_view_config</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Bundle</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’e.entity_id’),’website_field’ ⇒ new Zend_Db_Expr(’cw.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Bundle</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_price_index_table</td>
+              <td class="confluenceTd" colspan="2">array(’index_table’ ⇒ array(’i’ ⇒ $this→_getDefaultFinalPriceTable()),’select’ ⇒ $select,’entity_id’ ⇒ ‘i.entity_id</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Bundle</td>
+              <td class="confluenceTd" colspan="2">catalog_product_prepare_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’website’ ⇒ $website,’select’ ⇒ $select)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Bundle</td>
+              <td class="confluenceTd" colspan="2">catalog_product_get_final_price</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_block_product_list_collection</td>
+              <td class="confluenceTd" colspan="2">array(’collection’⇒$this→_getProductCollection(),)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_view_config</td>
+              <td class="confluenceTd" colspan="2">array(’response_object’⇒$responseObject)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_upsell</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product,’collection’ ⇒ $this→_itemCollection,’limit’ ⇒ $this→getItemLimit())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_category_init_before</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_category_init_after</td>
+              <td class="confluenceTd" colspan="2">array(’category’⇒$category, ‘controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_product_init_before</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_product_init</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_product_init_after</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product, ‘controller_action’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_controller_product_view</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_compare_add_product</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_compare_remove_product</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$item)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_helper_output_construct</td>
+              <td class="confluenceTd" colspan="2">array(’helper’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_move_before</td>
+              <td class="confluenceTd" colspan="2">$eventParams</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_move_before’</td>
+              <td class="confluenceTd" colspan="2">$eventParams</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_move_after’</td>
+              <td class="confluenceTd" colspan="2">$eventParams</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_move_after</td>
+              <td class="confluenceTd" colspan="2">$eventParams</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">category_move</td>
+              <td class="confluenceTd" colspan="2">$eventParams</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_validate_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_validate_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_model_product_duplicate</td>
+              <td class="confluenceTd" colspan="2">array(’current_product’⇒$this, ‘new_product’⇒$newProduct)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_is_salable_before</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_is_salable_after</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $this,’salable’ ⇒ $object)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_delete_after_done’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_import_after</td>
+              <td class="confluenceTd" colspan="2">array()</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_website_update_before</td>
+              <td class="confluenceTd" colspan="2">array(’website_ids’ ⇒ $websiteIds,’product_ids’ ⇒ $productIds,’action’ ⇒ $type)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_website_update</td>
+              <td class="confluenceTd" colspan="2">array(’website_ids’ ⇒ $websiteIds,’product_ids’ ⇒ $productIds,’action’ ⇒ $type)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_status_update</td>
+              <td class="confluenceTd" colspan="2">array(’product_id’ ⇒ $productId,’store_id’ ⇒ $storeId,’status’ ⇒ $value)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_get_final_price</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_change_products</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $category,’product_ids’ ⇒ $productIds)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_load_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_load_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_add_is_active_filter’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_init_inactive_category_ids</td>
+              <td class="confluenceTd" colspan="2">array(’tree’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_init_inactive_category_ids</td>
+              <td class="confluenceTd" colspan="2">array(’tree’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_move_before</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $category,’prev_parent’ ⇒ $prevNode,’parent’ ⇒ $newParent)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_category_tree_move_after</td>
+              <td class="confluenceTd" colspan="2">array(’category’ ⇒ $category,’prev_node’ ⇒ $prevNode,’parent’ ⇒ $newParent)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_load_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_load_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_add_is_active_filter’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_collection_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_collection_load_after</td>
+              <td class="confluenceTd" colspan="2">array(’collection’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_collection_before_add_count_to_categories</td>
+              <td class="confluenceTd" colspan="2">array(’collection’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_collection_apply_limitations_after</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_compare_item_collection_clear’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_flat_prepare_columns</td>
+              <td class="confluenceTd" colspan="2">array(’columns’ ⇒ $columnsObject)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_flat_prepare_indexes</td>
+              <td class="confluenceTd" colspan="2">array(’indexes’ ⇒ $indexesObject)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_flat_rebuild</td>
+              <td class="confluenceTd" colspan="2">array(’store_id’ ⇒ $store,’table’ ⇒ $this→getFlatTableName($store))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">catalog_product_flat_update_product</td>
+              <td class="confluenceTd" colspan="2">array(’store_id’ ⇒ $store,’table’ ⇒ $this→getFlatTableName($store),’product_ids’ ⇒ $productIds)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’pid.entity_id’),’website_field’ ⇒ new Zend_Db_Expr(’cs.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’pvd.entity_id’),’website_field’ ⇒ new Zend_Db_Expr(’cs.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’l.parent_id’),’website_field’ ⇒ new Zend_Db_Expr(’cs.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’e.entity_id’),’website_field’ ⇒ new Zend_Db_Expr(’cw.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_price_index_table</td>
+              <td class="confluenceTd" colspan="2">array(’index_table’ ⇒ array(’i’ ⇒ $this→_getDefaultFinalPriceTable()),’select’ ⇒ $select,’entity_id’ ⇒ ‘i.entity_id</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Catalog</td>
+              <td class="confluenceTd" colspan="2">prepare_catalog_product_price_index_select</td>
+              <td class="confluenceTd" colspan="2">array(’select’ ⇒ $select,’entity_field’ ⇒ new Zend_Db_Expr(’e.entity_id’),’website_field’ ⇒ new Zend_Db_Expr(’cw.website_id’),’store_field’ ⇒ new Zend_Db_Expr(’cs.store_id’))</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_plain_reindex_after</td>
+              <td class="confluenceTd" colspan="2">array(’products’ ⇒ $products)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_get_minimal_price</td>
+              <td class="confluenceTd" colspan="2">$eventData</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogIndex</td>
+              <td class="confluenceTd" colspan="2">catalogindex_prepare_price_select</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogRule</td>
+              <td class="confluenceTd" colspan="2">catalogrule_before_apply</td>
+              <td class="confluenceTd" colspan="2">array(’resource’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogRule</td>
+              <td class="confluenceTd" colspan="2">catalogrule_after_apply</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product,’product_condition’ ⇒ $productCondition)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">CatalogSearch</td>
+              <td class="confluenceTd" colspan="2">catalogsearch_reset_search_result’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_cart_add_product_complete</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product, ‘request’ ⇒ $this→getRequest(), ‘response’ ⇒ $this→getResponse())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_controller_multishipping_shipping_post</td>
+              <td class="confluenceTd" colspan="2">array(’request’⇒$this→getRequest(), ‘quote’⇒$this→_getCheckout()→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_multishipping_controller_success_action’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_onepage_controller_success_action’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_controller_onepage_save_shipping_method</td>
+              <td class="confluenceTd" colspan="2">array(’request’⇒$this→getRequest(), ‘quote’⇒$this→getOnepage()→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_allow_guest</td>
+              <td class="confluenceTd" colspan="2">array(’quote’ ⇒ $quote,’store’ ⇒ $store,’result’ ⇒ $result)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_cart_product_add_after</td>
+              <td class="confluenceTd" colspan="2">array(’quote_item’⇒$result, ‘product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_cart_update_items_before</td>
+              <td class="confluenceTd" colspan="2">array(’cart’⇒$this, ‘info’⇒$data)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_cart_update_items_after</td>
+              <td class="confluenceTd" colspan="2">array(’cart’⇒$this, ‘info’⇒$data)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_cart_info_item_unset_product_before</td>
+              <td class="confluenceTd" colspan="2">array(</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_quote_init</td>
+              <td class="confluenceTd" colspan="2">array(’quote’⇒$quote)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_quote_destroy</td>
+              <td class="confluenceTd" colspan="2">array(’quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_type_multishipping_set_shipping_items</td>
+              <td class="confluenceTd" colspan="2">array(’quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_type_multishipping_create_orders_single</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘address’⇒$address)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Checkout</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order_after</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Cms</td>
+              <td class="confluenceTd" colspan="2">cms_controller_router_match_before</td>
+              <td class="confluenceTd" colspan="2">array(’router’ ⇒ $this,’condition’ ⇒ $condition)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Cms</td>
+              <td class="confluenceTd" colspan="2">cms_page_get_available_statuses</td>
+              <td class="confluenceTd" colspan="2">array(’statuses’ ⇒ $statuses)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_block_abstract_prepare_layout_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_block_abstract_prepare_layout_after</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_block_abstract_to_html_before</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_block_abstract_to_html_after</td>
+              <td class="confluenceTd" colspan="2">array(’block’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">http_response_send_before</td>
+              <td class="confluenceTd" colspan="2">array(’response’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’action’⇒$this, ‘layout’⇒$this→getLayout())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_generate_xml_before</td>
+              <td class="confluenceTd" colspan="2">array(’action’⇒$this, ‘layout’⇒$this→getLayout())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_generate_blocks_before</td>
+              <td class="confluenceTd" colspan="2">array(’action’⇒$this, ‘layout’⇒$this→getLayout())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_generate_blocks_after</td>
+              <td class="confluenceTd" colspan="2">array(’action’⇒$this, ‘layout’⇒$this→getLayout())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_render_before’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_layout_render_before_’.$this→getFullActionName()</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_predispatch</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_predispatch_’.$this→getRequest()→getRouteName()</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_predispatch_’.$this→getFullActionName()</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_postdispatch_’.$this→getFullActionName()</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_postdispatch_’.$this→getRequest()→getRouteName()</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_postdispatch</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_noroute</td>
+              <td class="confluenceTd" colspan="2">array(’action’⇒$this, ‘status’⇒$status)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_action_nocookies</td>
+              <td class="confluenceTd" colspan="2">array(’action’ ⇒ $this,’redirect’ ⇒ $redirect)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_front_init_before</td>
+              <td class="confluenceTd" colspan="2">array(’front’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">controller_front_init_routers</td>
+              <td class="confluenceTd" colspan="2">array(’front’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_load_after</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_load_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_save_commit_after</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_save_commit_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_save_before</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_save_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_save_after</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_save_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_delete_before</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_delete_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_delete_after</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_delete_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">model_delete_commit_after</td>
+              <td class="confluenceTd" colspan="2">array(’object’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix.’_delete_commit_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">application_clean_cache</td>
+              <td class="confluenceTd" colspan="2">array(’tags’ ⇒ $tags)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_locale_set_locale</td>
+              <td class="confluenceTd" colspan="2">array(’locale’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">resource_get_tablename</td>
+              <td class="confluenceTd" colspan="2">array(’resource’ ⇒ $this, ‘model_entity’ ⇒ $modelEntity, ‘table_name’ ⇒ $tableName)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_layout_update_updates_get_after</td>
+              <td class="confluenceTd" colspan="2">array(’updates’ ⇒ $updatesRoot)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_layout_update_updates_get_after</td>
+              <td class="confluenceTd" colspan="2">array(’updates’ ⇒ $updatesRoot)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_collection_abstract_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Core</td>
+              <td class="confluenceTd" colspan="2">core_collection_abstract_load_after</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_registration_is_allowed</td>
+              <td class="confluenceTd" colspan="2">array(’result’ ⇒ $result)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_customer_authenticated</td>
+              <td class="confluenceTd" colspan="2">array(’model’ ⇒ $this,’password’ ⇒ $password,)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_session_init</td>
+              <td class="confluenceTd" colspan="2">array(’customer_session’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_login</td>
+              <td class="confluenceTd" colspan="2">array(’customer’⇒$customer)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_login</td>
+              <td class="confluenceTd" colspan="2">array(’customer’⇒$customer)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_login</td>
+              <td class="confluenceTd" colspan="2">array(’customer’⇒$customer)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Customer</td>
+              <td class="confluenceTd" colspan="2">customer_logout</td>
+              <td class="confluenceTd" colspan="2">array(’customer’ ⇒ $this→getCustomer())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Eav</td>
+              <td class="confluenceTd" colspan="2">adminhtml_block_eav_attribute_edit_form_init</td>
+              <td class="confluenceTd" colspan="2">array(’form’ ⇒ $this→getForm())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Eav</td>
+              <td class="confluenceTd" colspan="2">eav_attribute_get_backend_type_by_input</td>
+              <td class="confluenceTd" colspan="2">array(’model’⇒$this, ‘type’⇒$type)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Eav</td>
+              <td class="confluenceTd" colspan="2">eav_attribute_get_default_value_by_input</td>
+              <td class="confluenceTd" colspan="2">array(’model’⇒$this, ‘type’⇒$type)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Eav</td>
+              <td class="confluenceTd" colspan="2">eav_collection_abstract_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">GoogleCheckout</td>
+              <td class="confluenceTd" colspan="2">google_checkout_discount_item_price</td>
+              <td class="confluenceTd" colspan="2">array(’quote’ ⇒ $this→getQuote(), ‘discount_item’ ⇒ $discountItem)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Log</td>
+              <td class="confluenceTd" colspan="2">log_log_clean_before</td>
+              <td class="confluenceTd" colspan="2">array(’log’ ⇒ $object)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Log</td>
+              <td class="confluenceTd" colspan="2">log_log_clean_after</td>
+              <td class="confluenceTd" colspan="2">array(’log’ ⇒ $object)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Log</td>
+              <td class="confluenceTd" colspan="2">log_visitor_collection_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Oscommerce</td>
+              <td class="confluenceTd" colspan="2">store_add</td>
+              <td class="confluenceTd" colspan="2">array(’store’⇒$storeModel)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Payment</td>
+              <td class="confluenceTd" colspan="2">payment_method_is_active</td>
+              <td class="confluenceTd" colspan="2">array(’result’ ⇒ $checkResult,’method_instance’ ⇒ $this,’quote’ ⇒ $quote,)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Paypal</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getReview()→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Paypal</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">PaypalUk</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getReview()→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">PaypalUk</td>
+              <td class="confluenceTd" colspan="2">checkout_type_onepage_save_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$this→getQuote())</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Review</td>
+              <td class="confluenceTd" colspan="2">review_controller_product_init_before</td>
+              <td class="confluenceTd" colspan="2">array(’controller_action’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Review</td>
+              <td class="confluenceTd" colspan="2">review_controller_product_init</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Review</td>
+              <td class="confluenceTd" colspan="2">review_controller_product_init_after</td>
+              <td class="confluenceTd" colspan="2">array(’product’⇒$product, ‘controller_action’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Review</td>
+              <td class="confluenceTd" colspan="2">review_review_collection_load_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rss</td>
+              <td class="confluenceTd" colspan="2">rss_catalog_category_xml_callback</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rss</td>
+              <td class="confluenceTd" colspan="2">rss_catalog_new_xml_callback</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rss</td>
+              <td class="confluenceTd" colspan="2">rss_catalog_special_xml_callback</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rss</td>
+              <td class="confluenceTd" colspan="2">rss_catalog_tagged_item_xml_callback</td>
+              <td class="confluenceTd" colspan="2">$args</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rss</td>
+              <td class="confluenceTd" colspan="2">rss_order_new_collection_select</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $collection)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Rule</td>
+              <td class="confluenceTd" colspan="2">rule_environment_collect</td>
+              <td class="confluenceTd" colspan="2">array(’env’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_place_before</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_place_after</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_remove_item</td>
+              <td class="confluenceTd" colspan="2">array(’quote_item’ ⇒ $item)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_add_item</td>
+              <td class="confluenceTd" colspan="2">array(’quote_item’ ⇒ $item)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_collect_totals_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_collect_totals_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_merge_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this,’source’⇒$quote)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_merge_after’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this,’source’⇒$quote)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_order_to_quote</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$quote)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_quote_to_order</td>
+              <td class="confluenceTd" colspan="2">array(’order’⇒$order, ‘quote’⇒$quote)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_quote_address_to_order</td>
+              <td class="confluenceTd" colspan="2">array(’address’⇒$address, ‘order’⇒$order)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_quote_address_to_order_address</td>
+              <td class="confluenceTd" colspan="2">array(’address’ ⇒ $address, ‘order_address’ ⇒ $orderAddress)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_quote_payment_to_order_payment</td>
+              <td class="confluenceTd" colspan="2">array(’order_payment’ ⇒ $orderPayment, ‘quote_payment’ ⇒ $payment)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_convert_quote_item_to_order_item</td>
+              <td class="confluenceTd" colspan="2">array(’order_item’⇒$orderItem, ‘item’⇒$item)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_item_collection_products_after_load</td>
+              <td class="confluenceTd" colspan="2">array(’product_collection’⇒$productCollection)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_sale_collection_query_before</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_creditmemo_refund</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_creditmemo_cancel</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_invoice_pay</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_invoice_cancel</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_item_cancel</td>
+              <td class="confluenceTd" colspan="2">array(’item’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_place_start</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_place_end</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_capture</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘invoice’ ⇒ $invoice)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_pay</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘invoice’ ⇒ $invoice)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_cancel_invoice</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘invoice’ ⇒ $invoice)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_void</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘invoice’ ⇒ $document)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_refund</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘creditmemo’ ⇒ $creditmemo)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_cancel_creditmemo</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this, ‘creditmemo’ ⇒ $creditmemo)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_order_payment_cancel</td>
+              <td class="confluenceTd" colspan="2">array(’payment’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_item_qty_set_after</td>
+              <td class="confluenceTd" colspan="2">array(’item’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_item_set_product</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product,’quote_item’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">$this→_eventPrefix . ‘_import_data_before’</td>
+              <td class="confluenceTd" colspan="2">array($this→_eventObject⇒$this,’input’⇒$data,)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_address_discount_item</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sales</td>
+              <td class="confluenceTd" colspan="2">sales_quote_address_discount_item</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">SalesRule</td>
+              <td class="confluenceTd" colspan="2">salesrule_validator_process</td>
+              <td class="confluenceTd" colspan="2">array(’rule’ ⇒ $rule,’item’ ⇒ $item,’address’ ⇒ $address,’quote’ ⇒ $quote,’qty’ ⇒ $qty,’result’ ⇒ $result,)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">SalesRule</td>
+              <td class="confluenceTd" colspan="2">sales_quote_address_discount_item</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">SalesRule</td>
+              <td class="confluenceTd" colspan="2">sales_quote_address_discount_item</td>
+              <td class="confluenceTd" colspan="2">$eventArgs</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">SalesRule</td>
+              <td class="confluenceTd" colspan="2">salesrule_rule_condition_combine</td>
+              <td class="confluenceTd" colspan="2">array(’additional’ ⇒ $additional)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Sendfriend</td>
+              <td class="confluenceTd" colspan="2">sendfriend_product</td>
+              <td class="confluenceTd" colspan="2">array(’product’ ⇒ $product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tag</td>
+              <td class="confluenceTd" colspan="2">tag_tag_product_collection_load_after</td>
+              <td class="confluenceTd" colspan="2">array(’collection’ ⇒ $this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_rate_data_fetch</td>
+              <td class="confluenceTd" colspan="2">array(’request’⇒$this)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_settings_change_after’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_settings_change_after’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_settings_change_after’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_settings_change_after’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Tax</td>
+              <td class="confluenceTd" colspan="2">tax_settings_change_after’</td>
+              <td class="confluenceTd" style="text-align: right;" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Wishlist</td>
+              <td class="confluenceTd" colspan="2">wishlist_add_product</td>
+              <td class="confluenceTd" colspan="2">array(’wishlist’⇒$wishlist, ‘product’⇒$product)</td>
+            </tr>
+            <tr>
+              <td class="confluenceTd" colspan="2">Mage</td>
+              <td class="confluenceTd" colspan="2">Wishlist</td>
+              <td class="confluenceTd" colspan="2">wishlist_share</td>
+              <td class="confluenceTd" colspan="2">array(’wishlist’⇒$wishlist)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><span style="color: rgb(85,85,85);">This is what should be put in config.xml of your module to hook on an event.</span></p>
+      <div style="border-width: 1px;" class="code panel pdl">
+        <div class="codeHeader panelHeader pdl hide-border-bottom"> <b class="code-title"></b> <span class="collapse-source expand-control"><span class="expand-control-icon icon">&nbsp;</span><span class="expand-control-text">Expand source</span></span> </div>
+        <div class="codeContent panelContent pdl hide-toolbar">
+          <div>
+            <div class="syntaxhighlighter collapsed  xml" id="highlighter_400576">
+              <div class="toolbar"><span><a class="toolbar_item command_expandSource expandSource" href="#">expand source</a></span><span><a class="toolbar_item command_help help" href="#">?</a></span></div>
+              <table cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="gutter"><div class="line number1 index0 alt2">1</div>
+                      <div class="line number2 index1 alt1">2</div>
+                      <div class="line number3 index2 alt2">3</div>
+                      <div class="line number4 index3 alt1">4</div>
+                      <div class="line number5 index4 alt2">5</div>
+                      <div class="line number6 index5 alt1">6</div>
+                      <div class="line number7 index6 alt2">7</div>
+                      <div class="line number8 index7 alt1">8</div>
+                      <div class="line number9 index8 alt2">9</div>
+                      <div class="line number10 index9 alt1">10</div>
+                      <div class="line number11 index10 alt2">11</div>
+                      <div class="line number12 index11 alt1">12</div>
+                      <div class="line number13 index12 alt2">13</div></td>
+                    <td class="code"><div title="Hint: double-click to select code" class="container">
+                        <div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">global</code><code class="xml plain">&gt; ....</code></div>
+                        <div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">events</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">controller_front_init_before</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">observers</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">init_store_from_ip</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">type</code><code class="xml plain">&gt;singleton&lt;/</code><code class="xml keyword">type</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">class</code><code class="xml plain">&gt;geoIPlocator/observer&lt;/</code><code class="xml keyword">class</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">method</code><code class="xml plain">&gt;assignStoreView&lt;/</code><code class="xml keyword">method</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">init_store_from_ip</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number10 index9 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">observers</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number11 index10 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">controller_front_init_before</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number12 index11 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">events</code><code class="xml plain">&gt;</code></div>
+                        <div class="line number13 index12 alt2"><code class="xml plain">.... &lt;/</code><code class="xml keyword">global</code><code class="xml plain">&gt;&nbsp;</code></div>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p><span style="color: rgb(85,85,85);"><br>
+        </span></p>
+    </div>
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="https://wiki.magento.com/display/m1wiki/Magento+1.x+Events+Reference"
+    dc:identifier="https://wiki.magento.com/display/m1wiki/Magento+1.x+Events+Reference"
+    dc:title="Magento 1.x Events Reference"
+    trackback:ping="https://wiki.magento.com/rpc/trackback/10223906"/>
+</rdf:RDF>
+-->
+    <div id="likes-and-labels-container">
+      <div id="likes-section" style="display: none;"><span class="like-summary"></span></div>
+      <div class="pageSection group" id="labels-section">
+        <div entitytype="page" entityid="10223906" class="labels-section-content content-column">
+          <div class="labels-content">
+            <ul class="label-list label-list-right ">
+              <li class="no-labels-message"> No labels </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pageSection group" id="comments-section">
+      <div class="bottom-comment-panels comment-panels"> </div>
+    </div>
+  </div>
+  <div class="hidden" id="space-tools-web-items">
+    <div data-href="/spaces/viewspacesummary.action?key=m1wiki" data-label="Overview">Overview</div>
+    <div data-href="/pages/reorderpages.action?key=m1wiki" data-label="Content Tools">Content Tools</div>
+    <div data-href="/spaces/usage/report.action?key=m1wiki" data-label="Activity">Activity</div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+<?php echo Mage::getBlockSingleton('directory/data')->getCountryHtmlSelect('CN');?>

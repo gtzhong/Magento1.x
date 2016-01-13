@@ -1,0 +1,1 @@
+<?php $text = preg_replace("/(\r\n|\n|\r|\t)/i", '', $text);?>

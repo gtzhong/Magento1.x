@@ -1,0 +1,2 @@
+#添加远程用户
+grant all privileges on yourdatabasename.* to newusername@"%" identified by "sdfK&^3sS";

@@ -1,0 +1,8 @@
+1. 网络设置，内部网络没有问题，可以正常访问，但是外网不能访问时，查看配置网站的信息
+	a.	#查询UUID 
+	b.	# ls -l /dev/disk/by-uuid/ L
+	c.	#blkid /dev/sda3
+	可以得到正确 的UUID信息
+	然后把 "[		/etc/sysconfig/network-scripts/ifcfg-eno16777736	]"的UUID信息改过来
+	d.	如果是虚拟主机，把DNS也改为本机的DNS一样即可
+	

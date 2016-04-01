@@ -1,0 +1,10 @@
+<script type="text/javascript">
+var elements = document.forms["ck_q2o_placeorder_form"].elements;
+        var addr = {};
+            addr["is_new"] = (typeof(is_new) == "boolean" && is_new == true) ? true:false;
+        for(x in elements){
+            var d = elements[x];
+            addr[d.name] = d.value;
+        }
+
+</script>
